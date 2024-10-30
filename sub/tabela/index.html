@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Agendamentos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="tabela.png" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/docx/7.3.0/docx.min.js"></script>
+</head>
+<body>
+    <h1 style="text-align: center;">Tabela de Agendamentos</h1>
+    <div>
+        <input type="text" id="nome" placeholder="Nome">
+        <input type="text" id="telefone" placeholder="Telefone">
+        <input type="text" id="mv" placeholder="MV">
+        <input type="number" id="nota" placeholder="Agendamentos">
+        <button onclick="adicionarLinha()">Adicionar</button>
+        <button onclick="baixarTabela()">Baixar Tabela (CSV)</button>
+    </div>
+    <table id="tabela" border="1">
+        <thead>
+            <tr>
+                <th style="color: #FF9800;">Nome</th>
+                <th style="color: #FF9800;">Telefone</th>
+                <th style="color: #1ABC9C;">MV</th>
+                <th style="color: #E74C3C;">Agendamentos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Linhas da tabela serão adicionadas aqui -->
+        </tbody>
+    </table>
+    <h2>Total de Agendamentos: <span id="totalNotas">0</span></h2>
+    <script src="script.js"></script>
+</body>
+</html>
