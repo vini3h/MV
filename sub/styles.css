@@ -5,10 +5,12 @@ body {
     margin: 0;
     display: flex;
     background-color: #ECF0F1; /* Cinza claro */
+    overflow: hidden; /* Impede a rolagem do body */
 }
 
 .container {
     display: flex;
+    position: fixed;
 }
 
 .sidebar {
@@ -19,6 +21,8 @@ body {
     padding: 10px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
     transition: width 0.3s; /* Suaviza a transição da largura */
+    position: fixed; /* Garante que a barra lateral fique fixa */
+    overflow-y: auto; /* Permite rolagem apenas na barra lateral, se necessário */
 }
 
 .sidebar h2 {
@@ -45,6 +49,14 @@ body {
 
 .sidebar ul li a:hover {
     background-color: #1ABC9C; /* Verde */
+}
+
+main {
+    margin-left: 260px; /* Margem igual à largura da barra lateral */
+    padding: 20px; /* Espaçamento interno */
+    height: 100vh; /* Altura da viewport para centralização vertical */
+    overflow-y: auto; /* Permite rolagem se o conteúdo for longo */
+    box-sizing: border-box; /* Inclui padding na largura e altura */
 }
 
 .content {
