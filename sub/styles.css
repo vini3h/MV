@@ -59,21 +59,16 @@ main {
     box-sizing: border-box; /* Inclui padding na largura e altura */
 }
 
-.content {
-    padding: 20px;
+main.content {
+    padding: 100px;
     flex-grow: 1;
-    background-color: #ECF0F1; /* Cinza claro */
-}
-
-.content h1 {
-    color: #34495E; /* Azul mais claro */
 }
 
 /* Outras classes e estilos permanecem os mesmos */
 .search {
     position: absolute;
     top: 3%;
-    left: 65%;
+    left: 50%;
     background: #0a1b2d;
     height: 24px;
     padding: 10px;
@@ -129,7 +124,7 @@ main {
 #tabela-container {
     position: absolute; /* Para manter o posicionamento */
     top: 80px; /* Ajuste conforme necessário para que fique logo abaixo da barra de pesquisa */
-    left: 65%; /* Para alinhar com a barra de pesquisa */
+    left: 35%; /* Para alinhar com a barra de pesquisa */
     background: #0a1b2d; /* Fundo da tabela */
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
@@ -141,4 +136,77 @@ main {
     text-align: left;
     border: 1px solid #ccc;
     background-color: white;
+}
+
+.pop {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    outline: none;
+    position: relative;
+}
+
+.popup-button,
+.popup .close-popup-button {
+    background-color: #ee404c;
+    border: none;
+    padding: 8px 30px;
+    border-radius: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .4s;
+    margin: 12px 0;
+}
+
+.popup-button:hover,
+.popup .close-popup-button:hover {
+    opacity: .8;
+}
+
+.popup-button:active,
+.popup .close-popup-button:active {
+    transform: scale(.8);
+}
+
+.popup {
+    position: absolute;
+    background-color: #333;
+    padding: 30px 50px;
+    border-radius: 8px;
+    text-align: center;
+    width: 500px;
+    box-sizing: border-box;
+    transition: all .4s;
+    z-index: -1;
+    transform: scale(.4);
+    opacity: 0;
+}
+
+.popup.opened {
+    z-index: 999;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.popup img {
+    width: 100px;
+}
+
+.popup h2.title {
+    color: #ee404c
+}
+
+.popup p.desc,
+.popup p.desc a {
+    color: #fff;
+}
+
+.popup p.att {
+    color: #fff;
 }

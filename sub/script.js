@@ -31,3 +31,13 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+// função popup
+const popup = document.getElementById('popup');
+
+function handlePopup(open) {
+    if (open)
+        popup.classList.add('opened');
+    else
+        popup.classList.remove('opened');
+}
