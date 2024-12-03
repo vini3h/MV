@@ -64,6 +64,10 @@ main.content {
     flex-grow: 1;
 }
 
+main.content > article {
+    padding: 15px;
+}
+
 /* Outras classes e estilos permanecem os mesmos */
 .search {
     position: absolute;
