@@ -142,6 +142,7 @@ main.content > article {
     background-color: white;
 }
 
+
 .pop {
     width: 100%;
     display: flex;
@@ -215,4 +216,10 @@ main.content > article {
 
 .popup p.att {
     color: #fff;
+}
+
+main.content > article.att {
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #333;
 }
