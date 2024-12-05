@@ -148,7 +148,7 @@ main.content > article {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #333;
+    background-color: #5a5a5a;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     outline: none;
     position: relative;
@@ -181,8 +181,8 @@ main.content > article {
 
 .popup {
     position: absolute; /* Muda para fixed para fixar o popup em relação à tela */
-    top: -200%; /* Posiciona o popup 50% da altura da tela */
-    left: 25%; /* Posiciona o popup 50% da largura da tela */
+    top: -100%; /* Posiciona o popup 50% da altura da tela */
+    left: 20%; /* Posiciona o popup 50% da largura da tela */
     background-color: #333;
     padding: 30px 50px;
     border-radius: 8px;
@@ -221,5 +221,6 @@ main.content > article {
 main.content > article.att {
     padding: 15px;
     border-radius: 8px;
-    background-color: #333;
+    background-color: #5a5a5a;
+    height: 100vh;
 }
