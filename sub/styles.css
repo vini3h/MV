@@ -215,13 +215,13 @@ main.content > article {
     color: #fff;
 }
 
-.popup p.att {
-    color: #fff;
+.popup strong.att {
+    color: #ee404c;
 }
 
 main.content > article.att {
     padding: 15px;
     border-radius: 8px;
     background-color: #5a5a5a;
-    height: 100vh;
+    height: 110vh;
 }
