@@ -225,3 +225,8 @@ main.content > article.att {
     background-color: #5a5a5a;
     height: 110vh;
 }
+
+article.att > h1,strong {
+    text-align: center;
+    color: white;
+}
