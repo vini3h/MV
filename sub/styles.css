@@ -6,6 +6,7 @@ body {
     display: flex;
     background-color: #ECF0F1; /* Cinza claro */
     overflow: hidden; /* Impede a rolagem do body */
+    height: 100%;
 }
 
 .container {
@@ -62,6 +63,8 @@ main {
 main.content {
     padding: 100px;
     flex-grow: 1;
+    justify-content: center;  /* Centraliza o conteúdo dentro do main */
+    align-items: center;      /* Alinha verticalmente o conteúdo */
 }
 
 main.content > article {
@@ -223,10 +226,24 @@ main.content > article.att {
     padding: 15px;
     border-radius: 8px;
     background-color: #5a5a5a;
-    height: 110vh;
+    min-height: 100vh;
 }
 
-article.att > h1,strong {
+article.att > h1,strong{
     text-align: center;
     color: white;
 }
+
+table.scale {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 20px auto;  
+    text-align: center;
+    }
+
+table.scale, tr, th, td {
+    border: 2px solid black;
+    background-color: grey;
+    color: whitesmoke;
+    font-weight: bold;
+    text-align: center;
+} 
