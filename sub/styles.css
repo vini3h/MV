@@ -4,7 +4,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     display: flex;
-    background-color: #ECF0F1; /* Cinza claro */
+    background-color: darkgrey; /* Cinza claro */
     overflow: hidden; /* Impede a rolagem do body */
     height: 100%;
 }
