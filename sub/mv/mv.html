@@ -13,17 +13,23 @@
     </style>
 </head>
 <body>
-    <nav>
-        <div class="sidebar">
-            <h2 style="text-decoration: none;">Sistema - MV</h2>
-            <ul>
-                <li><a href="../../index.html">&lArr;</a></li>
-                <li><a href="amb.html">Ambulatórios</a></li>
-                <li><a href="consulta.html">Consultas</a></li>
-                <li><a href="exame.html">Exames</a></li>
-            </ul>
+    <div class="container">
+        <nav class="sidebar">
+        <h2 style="text-decoration: none;">Sistema - MV</h2>
+        <ul>
+            <li><a href="../../index.html">&lArr;</a></li>
+            <li><a href="amb.html">Ambulatórios</a></li>
+            <li><a href="consulta.html">Consultas</a></li>
+            <li><a href="exame.html">Exames</a></li>
+        </ul>
+        <div class="pos">
+            <h3 style="text-decoration: none;">Modo escuro e claro:</h3>
+            <div class="trilho" id="trilho">
+                <div class="indicador"></div>
+            </div>
         </div>
-    </nav>
+        </nav>
+    </div>
     <main class="content" id="bkg">
         <h1 style="text-decoration: none; text-align: center;">Informações:</h1>
         &nbsp;
@@ -101,5 +107,25 @@
         <p>&#9856; Retorno &rAarr; Não precisa de encaminhamento.</p>
         <hr>
     </main>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const trilho = document.getElementById('trilho');
+      // Aplica o modo salvo ao carregar
+      const isDarkMode = localStorage.getItem('darkMode') === 'true';
+      if (isDarkMode) {
+        document.body.classList.add('dark');
+        trilho.classList.add('dark');
+      }
+
+      // Evento de clique no trilho
+      trilho.addEventListener('click', () => {
+        const isDark = document.body.classList.toggle('dark');
+        trilho.classList.toggle('dark');
+        localStorage.setItem('darkMode', isDark);
+      });
+    });
+    </script>
+
 </body>
 </html>

@@ -27,7 +27,99 @@ body {
 }
 
 .sidebar h2 {
-    color: #1ABC9C; /* Verde */
+    color: #20f5ca; /* Verde */
+}
+
+.sidebar div.pos {
+    position: absolute;
+    bottom: 30px; /* Move o trilho 20px para cima da borda */
+}
+
+.trilho {
+    width: 70px;
+    height: 30px;
+    background-color: #4d4d4d;
+    border-radius: 150px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px; /* Adiciona um pequeno padding para garantir alinhamento */
+    box-sizing: border-box;
+}
+
+.trilho .indicador {
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 50%;
+    transform: scale(.9);
+    position: absolute;
+    left: 0;
+    transition: .5s;
+}
+
+.trilho.dark {
+    background-color: #c3c3c3;
+}
+
+.trilho.dark .indicador {
+    left: 40px;
+    background-color: #fff;
+}
+
+body.dark {
+    background-color: #e6e6e6;
+    color: #000;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark p {
+    color: #000;
+}
+
+main.dark {
+    background-color: white;
+}
+
+main.dark p {
+    color: #000;
+}
+
+main.dark h3 {
+    color: #000;
+}
+
+body.dark table td {
+    color: #000;
+    background-color: rgb(218, 218, 218);
+}
+
+body.dark table th {
+    color: rgb(2, 145, 145);
+    background-color: rgb(218, 218, 218);
+}
+
+body.dark table.cross th {
+    color: #ad1f0f;
+    background-color: rgb(218, 218, 218);
+}
+
+body.dark table.treining th {
+    color: #d27e00;
+    background-color: rgb(218, 218, 218);
+}
+
+body.dark table {
+    background-color: rgb(218, 218, 218);
+}
+
+header.dark {
+    background-color: #6fa6dd;
 }
 
 .sidebar ul {
@@ -58,6 +150,7 @@ main {
     height: 100vh; /* Altura da viewport para centralização vertical */
     overflow-y: auto; /* Permite rolagem se o conteúdo for longo */
     box-sizing: border-box; /* Inclui padding na largura e altura */
+    color: white;
 }
 
 main.content {
@@ -231,7 +324,6 @@ main.content > article.att {
 
 article.att > h1,strong{
     text-align: center;
-    color: white;
 }
 
 table.scale {
@@ -247,3 +339,49 @@ table.scale, tr, th, td {
     font-weight: bold;
     text-align: center;
 } 
+
+table th {
+    color: cyan;
+}
+
+table.cross th {
+    color: red;
+}
+
+table.treining th {
+    color: orange;
+}
+
+body.dark article.att {
+    background-color: white;
+    color: #000;
+}
+
+body.dark div.pop {
+    background-color: white ;
+    color: #000; 
+}
+
+body.dark div.popup {
+    background-color: #f0f0f0;
+    color: #000; 
+}
+
+body.dark article.att h1,
+body.dark article.att strong,
+body.dark div.popup h2,
+body.dark div.popup a {
+    color: #000;
+}
+
+body.dark nav.sidebar h2 {
+    color: #1ABC9C;
+}
+
+body.dark nav.sidebar h2.cross {
+    color: #E74C3C;
+}
+
+body.dark nav.sidebar h2.treining {
+    color: #ed8e00;
+}

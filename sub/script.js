@@ -1,43 +1,57 @@
-document.getElementById('input-pesquisa').addEventListener('input', function() {
+// Pesquisa com filtro
+document.getElementById('input-pesquisa').addEventListener('input', function () {
     const filtro = this.value.toLowerCase();
     const linhas = document.querySelectorAll('#tabela-itens tbody tr');
     const tabela = document.getElementById('tabela-itens');
 
-    // Exibir a tabela apenas se houver uma pesquisa
-    if (filtro.length > 0) {
-        tabela.classList.remove('hidden'); // Exibe a tabela
-    } else {
-        tabela.classList.add('hidden'); // Esconde a tabela se a pesquisa estiver vazia
-    }
+    tabela.classList.toggle('hidden', filtro.length === 0);
 
     linhas.forEach(linha => {
         const textoItem = linha.textContent.toLowerCase();
-        if (textoItem.includes(filtro)) {
-            linha.style.display = ''; // Mostra a linha
-        } else {
-            linha.style.display = 'none'; // Esconde a linha
-        }
+        linha.style.display = textoItem.includes(filtro) ? '' : 'none';
     });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    const inputPesquisa = document.getElementById('input-pesquisa');
+// Ativação do campo de busca
+document.addEventListener("DOMContentLoaded", () => {
+    const trilho = document.getElementById('trilho');
+    const body = document.body;
 
-    inputPesquisa.addEventListener('input', function() {
-        if (inputPesquisa.value.trim() !== '') {
-            inputPesquisa.classList.add('active');
-        } else {
-            inputPesquisa.classList.remove('active');
-        }
+    // Verifica e aplica o modo salvo
+    const isDarkMode = localStorage.getItem('darkMode') === 'true';
+    if (isDarkMode) {
+        body.classList.add('dark');
+        trilho?.classList.add('dark');
+    }
+
+    // Adiciona o evento de clique no botão trilho
+    trilho?.addEventListener('click', () => {
+        const isDark = body.classList.toggle('dark');
+        trilho.classList.toggle('dark');
+        localStorage.setItem('darkMode', isDark.toString());
     });
 });
 
-// função popup
+// Popup
 const popup = document.getElementById('popup');
 
 function handlePopup(open) {
-    if (open)
-        popup.classList.add('opened');
-    else
-        popup.classList.remove('opened');
+    popup.classList.toggle('opened', open);
+}
+
+// Responsividade para menu (mantido caso use)
+function changeSize() {
+    if (window.innerWidth >= 600) {
+        itens.style.display = 'flex';
+    } else {
+        itens.style.display = 'none';
+    }
+}
+
+function clickMenu() {
+    if (itens.style.display === 'flex') {
+        itens.style.display = 'none';
+    } else {
+        itens.style.display = 'flex';
+    }
 }
