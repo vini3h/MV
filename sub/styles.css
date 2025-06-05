@@ -225,7 +225,7 @@ main.content > article {
 #tabela-container {
     position: absolute; /* Para manter o posicionamento */
     top: 80px; /* Ajuste conforme necessário para que fique logo abaixo da barra de pesquisa */
-    left: 35%; /* Para alinhar com a barra de pesquisa */
+    left: 45%; /* Para alinhar com a barra de pesquisa */
     background: #0a1b2d; /* Fundo da tabela */
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
