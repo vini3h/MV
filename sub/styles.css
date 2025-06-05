@@ -370,7 +370,8 @@ body.dark div.popup {
 body.dark article.att h1,
 body.dark article.att strong,
 body.dark div.popup h2,
-body.dark div.popup a {
+body.dark div.popup a,
+body.dark div.popup p {
     color: #000;
 }
 
