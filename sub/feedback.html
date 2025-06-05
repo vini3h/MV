@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="../sub/its.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../sub/styles.css">
+    <title>Feedback</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+                <h2>Feedback</h2>
+                <ul>
+                    <li><a href="../index.html">&lArr;</a></li>
+                </ul>
+
+                <div class="pos">
+                    <h3>Modo escuro e claro:</h3>
+                    <div class="trilho" id="trilho">
+                    <div class="indicador"></div>
+                </div>
+            </nav>
+    </div>
+
+    <main>
+        <div id="box">
+            <h1>Contato</h1>
+            <section>
+                <form action="https://api.staticforms.xyz/submit" method="post">
+                    <label>Nome</label>
+                    <input type="text" name="name" placeholder="Digite seu nome" autocomplete="off" required>
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="Digite seu email" autocomplete="off" required>
+                    <label>Mensagem</label>
+                    <textarea name="message" cols="30" rows="5  " placeholder="Deixe o seu feedback!" required></textarea>
+                    <button type="submit">Enviar</button>
+        
+                    <input type="hidden" name="accessKey" value="46a1016d-73cb-41c9-88e5-30413b05bf86">
+                    <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/sub/thanks.html">
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const trilho = document.getElementById('trilho');
+      // Aplica o modo salvo ao carregar
+      const isDarkMode = localStorage.getItem('darkMode') === 'true';
+      if (isDarkMode) {
+        document.body.classList.add('dark');
+        trilho.classList.add('dark');
+      }
+
+      // Evento de clique no trilho
+      trilho.addEventListener('click', () => {
+        const isDark = document.body.classList.toggle('dark');
+        trilho.classList.toggle('dark');
+        localStorage.setItem('darkMode', isDark);
+      });
+    });
+    </script>
+
+</body>
+</html>
